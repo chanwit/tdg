@@ -1,0 +1,14 @@
+{
+  "name": "tdg",
+  "version": "0.1.2",
+  "description": "Test-Driven Generation plugin for Claude Code",
+  "author": {
+    "name": "Chanwit Kaewkasi",
+    "email": "chanwit@gmail.com",
+    "url": "https://github.com/chanwit"
+  },
+  "homepage": "https://github.com/chanwit/tdg",
+  "repository": "https://github.com/chanwit/tdg",
+  "license": "MIT",
+  "keywords": ["productivity", "testing", "test-driven", "generation"]
+}

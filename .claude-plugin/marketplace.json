@@ -1,0 +1,14 @@
+{
+  "name": "tdg-marketplace",
+  "owner": {
+    "name": "Chanwit Kaewkasi",
+    "email": "chanwit@gmail.com",
+    "url": "https://github.com/chanwit"
+  },
+  "plugins": [
+    {
+      "name": "tdg",
+      "source": "./"
+    }
+  ]
+}
