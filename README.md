@@ -9,8 +9,11 @@ TDG (Test-Driven Generation) enhances Claude Code with capabilities for test-dri
 ## Installation
 
 ```bash
-# Install from GitHub
-claude plugin install chanwit/tdg-plugin
+# Add the TDG marketplace
+claude plugin marketplace add chanwit/tdg
+
+# Install the plugin
+claude plugin install tdg
 ```
 
 ## Components
