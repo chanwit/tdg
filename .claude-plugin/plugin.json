@@ -1,6 +1,6 @@
 {
   "name": "tdg",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Test-Driven Generation plugin for Claude Code",
   "author": {
     "name": "Chanwit Kaewkasi",
