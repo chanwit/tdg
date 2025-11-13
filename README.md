@@ -28,6 +28,7 @@ claude plugin install tdg
 
 - `/tdg:init` - Initialize TDG configuration for your project (detects language, framework, test commands)
 - `/tdg:version` - Show the current TDG plugin version
+- `/tdg:atomic-commit` - Create clean, atomic commits by analyzing and organizing your changes
 
 ### Skills
 
