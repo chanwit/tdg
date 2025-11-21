@@ -2,4 +2,4 @@
 description: Show the current TDG plugin version
 ---
 
-0.3.0
+Show only version text: "0.4.0" AND nothing else.

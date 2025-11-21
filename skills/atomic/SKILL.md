@@ -56,8 +56,9 @@ git log --oneline -n <N>
 ## Issue Integration
 - Check user message or branch name for issue number
 - IF no issue: ask if user wants to create one
+  - IF user does not want to provider, leave it blank
 - IF yes: help write description, offer `gh issue create` or `glab issue create`
-- Include in commits: `"feat: description (#42)"`
+  - Include in commits: `"feat: description (#42)"`
 
 ## Guidelines
 **DO:** One logical change, include related tests, run tests, clear messages, issue numbers
