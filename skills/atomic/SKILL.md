@@ -1,12 +1,14 @@
 ---
-name: Atomic Commit
-description: Atomic Commit helps create clean, atomic commits by analyzing changes, detecting mixed concerns, and ensuring each commit is a complete unit of work. Key words to detect are atomic, atomic commits, clean commits.
+name: atomic-commit
+description: "Creates clean, atomic commits by analyzing staged and unstaged changes, detecting mixed concerns, and grouping related files into single-purpose commits. Use when the user asks to split commits, separate changes, break down commits, organize commits, clean up commit history, or ensure commit hygiene. Do not use for TDD workflows — use tdg-test-driven-generation instead."
 ---
+
 # Atomic Commit
 
-Standalone skill for non-TDD workflows. Helps create clean, atomic commits by analyzing changes and detecting mixed concerns.
+Standalone skill for non-TDD workflows. Analyzes changes, detects mixed concerns, and creates single-purpose commits.
 
 ## Atomic Commit Definition
+
 - Does exactly one thing (one feature/fix/refactor)
 - Leaves codebase in working state (builds and tests pass)
 - Can be reverted independently
@@ -15,11 +17,13 @@ Standalone skill for non-TDD workflows. Helps create clean, atomic commits by an
 ## Workflow
 
 ### 1. Analyze Changes
+
 ```bash
 git status && git diff && git diff --staged
 ```
 
 ### 2. Detect Mixed Concerns
+
 Look for files mixing:
 - Multiple features
 - Bug fixes + features
@@ -29,6 +33,7 @@ Look for files mixing:
 - Tests for multiple features
 
 ### 3. Group Commits
+
 Group files by shared purpose. Present grouping to user for confirmation.
 
 Example:
@@ -38,6 +43,7 @@ Group 2: "Fix password validation" → validators/password.ts, tests/validators/
 ```
 
 ### 4. Create Each Commit
+
 For each group:
 1. Stage: `git add <file1> <file2>` (NO `git add .`)
 2. Review: `git diff --staged`
@@ -49,22 +55,27 @@ For each group:
 Conventional commit types: `feat|fix|refactor|docs|test|chore|perf|style`
 
 ### 5. Final Check
+
 ```bash
 git log --oneline -n <N>
 ```
 
 ## Issue Integration
+
 - Check user message or branch name for issue number
 - IF no issue: ask if user wants to create one
-  - IF user does not want to provider, leave it blank
+  - IF user does not want to provide, leave it blank
 - IF yes: help write description, offer `gh issue create` or `glab issue create`
   - Include in commits: `"feat: description (#42)"`
 
 ## Guidelines
+
 **DO:** One logical change, include related tests, run tests, clear messages, issue numbers
 **DON'T:** Mix features/fixes/refactors, commit broken code, vague messages, debug code
 
 ## TODO Pattern
+
+```
 ☐ Analyze: git status/diff
 ☐ Identify file purposes
 ☐ Detect mixed concerns
@@ -72,10 +83,8 @@ git log --oneline -n <N>
 ☐ Confirm with user
 ☐ For each: stage → review → test → build → commit → verify
 ☐ Final review
-
-## Activation
-Use when user says: "atomic", "clean commits", "break down commits", "split commits"
-DO NOT use for TDD workflows (use TDG skill).
+```
 
 ## Closing
+
 "Created N atomic commits. Tests pass. Would you like to review history, push, or create PR?"
